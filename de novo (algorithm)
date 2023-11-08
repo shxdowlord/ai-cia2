@@ -1,0 +1,22 @@
+1)Input:
+•	Receive an arbitrary number of substrings representing segments of a sentence.
+•	Initialize an empty list named substrings to store these substrings.
+•	Combine Substrings Function (combine_substrings):
+
+•	Create a function that merges two substrings to form a single sequence.
+•	Utilize dynamic programming to identify common characters and generate the merged sequence based on overlapping characters.
+•	Return the merged sequence.
+
+2)Merge Substrings Process:
+•	Initialize an empty list named substrings.
+•	Prompt the user to input substrings and add each substring to the substrings list until 'exit' is entered.
+•	If the number of collected substrings is less than 2, display an error message indicating that at least two substrings are required for merging.
+•	If at least two substrings are provided:
+•	Begin by setting the merged_word to the first substring in the substrings list.
+•	Loop through the substrings from the second one to the last.
+•	Utilize the combine_substrings() function to merge the merged_word with the current substring, updating merged_word with the merged result.
+•	Display the final merged word obtained after the loop.
+
+3)Output the Result:
+•	Execute the merging process using the provided substrings.
+•	Display the final merged sequence obtained after the merging operation.
