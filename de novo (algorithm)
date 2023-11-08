@@ -1,3 +1,4 @@
+Algorithm:
 1)Input:
 •	Receive an arbitrary number of substrings representing segments of a sentence.
 •	Initialize an empty list named substrings to store these substrings.
@@ -14,9 +15,16 @@
 •	If at least two substrings are provided:
 •	Begin by setting the merged_word to the first substring in the substrings list.
 •	Loop through the substrings from the second one to the last.
+•	Iterates through the substrings, merging them one by one with the merged_word.
+•	Updates the merged_word at each iteration until the merging of all substrings is completed.
 •	Utilize the combine_substrings() function to merge the merged_word with the current substring, updating merged_word with the merged result.
 •	Display the final merged word obtained after the loop.
 
-3)Output the Result:
+3) Combine Substrings Function:
+•	The combine_substrings function performs the merging of two substrings utilizing a dynamic programming approach.
+•	It establishes a matrix to find common characters and determine the merged sequence based on overlapping characters.
+
+4)Output the Result:
 •	Execute the merging process using the provided substrings.
 •	Display the final merged sequence obtained after the merging operation.
+
