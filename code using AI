@@ -1,0 +1,30 @@
+import spacy
+
+nlp = spacy.load("en_core_web_md")
+def find_sequence(substrings):
+    sequence = substrings[0]
+    while len(substrings) > 1:
+        for i, substring in enumerate(substrings[1:], start=1):
+            doc_sequence = nlp(sequence)
+            doc_substring = nlp(substring)
+            last_two_seq = doc_sequence.text[-2:]
+            first_two_sub = doc_substring.text[:2]
+            if last_two_seq == first_two_sub:
+                sequence += doc_substring.text[2:]
+                substrings.pop(i)
+                break
+        else:
+            break
+
+    return sequence
+sub_strings = []
+print("Enter 5 substrings:")
+for i in range(5):
+    str_ = input(f"Enter substring {i + 1}: ")
+    sub_strings.append(str_)
+result = find_sequence(sub_strings)
+
+if result:
+    print("Final Sequence:", result)
+else:
+    print("Sequence not found.")
